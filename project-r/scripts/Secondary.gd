@@ -17,7 +17,6 @@ func _physics_process(delta):
 		generate_path()
 		navigate()
 	move()
-	print((primary.global_position-global_position).abs())
 	
 func generate_path():
 	if primary != null and navigation_path != null:
@@ -28,5 +27,5 @@ func navigate():
 		direction = global_position.direction_to(path[1]) * speed
 	
 func move():
-	if (primary.global_position-global_position).abs().length_squared() > Vector2(100,100).length_squared():
+	if (primary.global_position-global_position).abs().length_squared() > Vector2(75,75).length_squared():
 		move_and_collide(direction * deltaT)
