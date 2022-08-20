@@ -6,7 +6,6 @@ var deltaT
 func _physics_process(delta):
 	deltaT = delta
 	walking()
-	aiming()
 
 func walking():
 	var direction = Vector2()
@@ -20,6 +19,4 @@ func walking():
 		direction += Vector2(0,1)
 	move_and_collide(direction.normalized() * speed * deltaT)
 	
-func aiming():
-	look_at(get_global_mouse_position())
 	
