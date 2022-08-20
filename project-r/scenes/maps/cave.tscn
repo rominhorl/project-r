@@ -139,7 +139,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/shapes = [  ]
 0/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="Cave" type="Node2D"]
 
 [node name="CaveFloor" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
@@ -153,4 +153,10 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 131075, 0, 65536, 131076, 0, 0, 131082, 0, 0, 131087, 0, 65536, 131088, 0, 0, 196612, 0, 0, 196613, 0, 65536, 196614, 0, 0, 262149, 0, 65536, 262150, 0, 0, 262151, 0, 65536, 262155, 0, 0, 262156, 0, 65536, 262157, 0, 0, 327691, 0, 0, 327692, 0, 65536, 327693, 0, 0, 327694, 0, 0, 393223, 0, 0, 393224, 0, 65536, 393227, 0, 65536, 393228, 0, 0, 393229, 0, 65536, 393230, 0, 65536, 458759, 0, 0, 458763, 0, 65536, 458764, 0, 65536, 458765, 0, 65536, 524291, 0, 0, 524292, 0, 0, 524293, 0, 65536, 524299, 0, 65536, 589827, 0, 0, 589828, 0, 65536, 589829, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 65536 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Hole" type="Sprite" parent="."]
+position = Vector2( 128, 112 )
+texture = ExtResource( 1 )
+offset = Vector2( 8, 8 )
+hframes = 14
+vframes = 10
+frame = 31
