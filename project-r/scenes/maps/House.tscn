@@ -3,7 +3,8 @@
 [ext_resource path="res://assets/girl idle.png" type="Texture" id=1]
 [ext_resource path="res://assets/tiles.png" type="Texture" id=2]
 [ext_resource path="res://assets/oldman idle.png" type="Texture" id=3]
-[ext_resource path="res://scenes/maps/House.gd" type="Script" id=4]
+[ext_resource path="res://scripts/House.gd" type="Script" id=4]
+
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )

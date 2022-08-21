@@ -21,6 +21,7 @@ script = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Pathfinding" type="Navigation2D" parent="Secondary"]
+visible = false
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Secondary/Pathfinding"]
 navpoly = SubResource( 2 )
