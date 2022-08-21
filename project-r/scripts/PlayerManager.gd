@@ -29,7 +29,7 @@ func pickCharacters():
 
 func changeCharacter():
 	if Input.is_action_just_pressed("space"):
-		primary = $Active.get_child(0)
+		primary = $Active.get_child(1)
 		secondary = $Secondary.get_child(1)
 		$Active.remove_child(primary)
 		$Secondary.add_child(primary)
