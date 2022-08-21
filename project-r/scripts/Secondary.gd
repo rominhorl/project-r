@@ -4,7 +4,7 @@ var primary
 var path = null
 var navigation_path = null
 var direction := Vector2.ZERO
-var speed = 300
+var speed = 100
 var deltaT
 
 func _ready():
@@ -27,5 +27,5 @@ func navigate():
 		direction = global_position.direction_to(path[1]) * speed
 	
 func move():
-	if (primary.global_position-global_position).abs().length_squared() > Vector2(75,75).length_squared():
+	if (primary.global_position-global_position).abs().length_squared() > Vector2(16,16).length_squared():
 		move_and_collide(direction * deltaT)
