@@ -3,8 +3,8 @@
 [ext_resource path="res://scripts/PlayerManager.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Active.gd" type="Script" id=2]
 [ext_resource path="res://scripts/Secondary.gd" type="Script" id=3]
-[ext_resource path="res://assets/dog idle.png" type="Texture" id=4]
-[ext_resource path="res://assets/cat idle.png" type="Texture" id=5]
+[ext_resource path="res://assets/Dog_idle.png" type="Texture" id=4]
+[ext_resource path="res://assets/Cat_idle.png" type="Texture" id=5]
 
 [sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( -474, -377, 1111, -269, 1094, 672, -444, 612 )
@@ -27,8 +27,8 @@ visible = false
 navpoly = SubResource( 2 )
 
 [node name="Active" type="KinematicBody2D" parent="."]
-collision_layer = 17
-collision_mask = 17
+collision_layer = 209
+collision_mask = 209
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

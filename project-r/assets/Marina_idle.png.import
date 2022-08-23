@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/girl idle.png-0de193c898cb0e02ac469305f368b3d0.stex"
+path="res://.import/Marina_idle.png-1d09443a0884ec3961147cb71a6566e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/girl idle.png"
-dest_files=[ "res://.import/girl idle.png-0de193c898cb0e02ac469305f368b3d0.stex" ]
+source_file="res://assets/Marina_idle.png"
+dest_files=[ "res://.import/Marina_idle.png-1d09443a0884ec3961147cb71a6566e0.stex" ]
 
 [params]
 

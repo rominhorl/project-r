@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/oldman idle.png-ff54851617bbfc1a50462102bfc5da74.stex"
+path="res://.import/Grandpa_idle.png-e2f4c93af4efb958f113ae59caf72c09.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/oldman idle.png"
-dest_files=[ "res://.import/oldman idle.png-ff54851617bbfc1a50462102bfc5da74.stex" ]
+source_file="res://assets/Grandpa_idle.png"
+dest_files=[ "res://.import/Grandpa_idle.png-e2f4c93af4efb958f113ae59caf72c09.stex" ]
 
 [params]
 
