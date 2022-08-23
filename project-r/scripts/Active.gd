@@ -17,6 +17,6 @@ func walking():
 		direction += Vector2(0,-1)
 	if Input.is_action_pressed("move_down"):
 		direction += Vector2(0,1)
-	move_and_collide(direction.normalized() * speed * deltaT)
+	move_and_slide(direction.normalized() * speed)
 	
 	
