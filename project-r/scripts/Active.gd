@@ -1,12 +1,11 @@
 extends KinematicBody2D
 
-var speed = 300
+var speed = 100
 var deltaT
 
 func _physics_process(delta):
 	deltaT = delta
 	walking()
-	aiming()
 
 func walking():
 	var direction = Vector2()
@@ -18,8 +17,6 @@ func walking():
 		direction += Vector2(0,-1)
 	if Input.is_action_pressed("move_down"):
 		direction += Vector2(0,1)
-	move_and_collide(direction.normalized() * speed * deltaT)
+	move_and_slide(direction.normalized() * speed)
 	
-func aiming():
-	look_at(get_global_mouse_position())
 	

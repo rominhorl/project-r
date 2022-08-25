@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles.png-0d11a4bcdfb48056f67a66da241684a1.stex"
+path="res://.import/spritesgarden.png-613e1578918d64b0e259a176fbb19dfe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles.png"
-dest_files=[ "res://.import/tiles.png-0d11a4bcdfb48056f67a66da241684a1.stex" ]
+source_file="res://assets/mapsprites/spritesgarden.png"
+dest_files=[ "res://.import/spritesgarden.png-613e1578918d64b0e259a176fbb19dfe.stex" ]
 
 [params]
 
