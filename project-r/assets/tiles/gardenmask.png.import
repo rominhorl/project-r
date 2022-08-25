@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy2.png-4c3f36c25be49bf350d9e44045369c16.stex"
+path="res://.import/gardenmask.png-a810b4028f8319881bf70d47bf7250a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/enemy2.png"
-dest_files=[ "res://.import/enemy2.png-4c3f36c25be49bf350d9e44045369c16.stex" ]
+source_file="res://assets/tiles/gardenmask.png"
+dest_files=[ "res://.import/gardenmask.png-a810b4028f8319881bf70d47bf7250a1.stex" ]
 
 [params]
 
