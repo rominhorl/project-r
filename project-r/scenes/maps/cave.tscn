@@ -176,7 +176,7 @@ vframes = 10
 frame = 31
 
 [node name="WormBasic" parent="." instance=ExtResource( 3 )]
-position = Vector2( 212, 94 )
+position = Vector2( 245, 75 )
 
 [connection signal="mouse_entered" from="Hole" to="." method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="Hole" to="." method="_on_Area2D_mouse_exited"]
