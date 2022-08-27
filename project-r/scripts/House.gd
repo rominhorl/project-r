@@ -4,6 +4,7 @@ extends Node2D
 
 var isPlayerOnDoor = false
 var gardenScene = "res://scenes/maps/Garden.tscn"
+var spawn
 
 # Signal
 

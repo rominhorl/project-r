@@ -180,5 +180,8 @@ position = Vector2( 192, 64 )
 
 [node name="DialogManagerV2" parent="." instance=ExtResource( 3 )]
 
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2( 184, 16 )
+
 [connection signal="body_entered" from="InsideDoor" to="." method="_on_InsideDoor_body_entered"]
 [connection signal="body_exited" from="InsideDoor" to="." method="_on_InsideDoor_body_exited"]
