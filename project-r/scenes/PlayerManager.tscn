@@ -270,6 +270,10 @@ __meta__ = {
 scale = Vector2( 5, 5 )
 shape = SubResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="Active"]
+current = true
+smoothing_enabled = true
+
 [node name="Dog" type="Node2D" parent="."]
 script = ExtResource( 7 )
 

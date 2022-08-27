@@ -35,13 +35,17 @@ func goToHouse():
 # Signals Functions
 
 func _on_WellInteraction_body_entered(body):
+	print('entrou no well')
 	isPlayerOnWell = true
 
 func _on_WellInteraction_body_exited(body):
+	print('saiu no well')
 	isPlayerOnWell = false
 
 func _on_OutsideDoor_body_entered(body):
+	print('entrou na porta')
 	isPlayerOnDoor = true
 
 func _on_OutsideDoor_body_exited(body):
+	print('saiu da porta')
 	isPlayerOnDoor = false

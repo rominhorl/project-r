@@ -4,6 +4,7 @@ extends Node2D
 
 var isPlayerOnDoor = false
 var gardenScene = "res://scenes/maps/Garden.tscn"
+var spawn
 
 # Signal
 
@@ -15,7 +16,7 @@ func _ready():
 	connect("changeScene",get_parent(),'changeScene')
 	$Grandpa.connect("callDialogGrandpa", $DialogManagerV2, "callDialog")
 	$Marina.connect("callDialogMarina", $DialogManagerV2, "callDialog")
-	$DialogManagerV2.callDialog("0")
+	#$DialogManagerV2.callDialog("0")
 
 	
 func _process(delta):
