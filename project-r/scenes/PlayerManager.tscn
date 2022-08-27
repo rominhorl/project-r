@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/PlayerManager.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Active.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/Cat_idle.png" type="Texture" id=5]
 [ext_resource path="res://assets/player/dogatack.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Dog.gd" type="Script" id=7]
+[ext_resource path="res://scripts/Cat.gd" type="Script" id=8]
 
 [sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( -474, -377, 1111, -269, 1094, 672, -444, 612 )
@@ -269,14 +270,6 @@ __meta__ = {
 scale = Vector2( 5, 5 )
 shape = SubResource( 1 )
 
-[node name="Cat" type="Node2D" parent="."]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Cat"]
-texture = ExtResource( 5 )
-
 [node name="Dog" type="Node2D" parent="."]
 script = ExtResource( 7 )
 
@@ -302,5 +295,16 @@ shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Dog"]
 texture = ExtResource( 4 )
+
+[node name="Cat" type="Node2D" parent="."]
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Cat"]
+texture = ExtResource( 5 )
+
+[node name="Attack" type="Node2D" parent="Cat"]
 
 [connection signal="body_entered" from="Dog/Attack/Hit" to="Dog" method="_on_Hit_body_entered"]

@@ -5,7 +5,7 @@ const body = preload ("res://enemyTest/Body.tscn")
 var bodyCount = 0
 
 func _ready():
-	spawnMob(5)
+	spawnMob(8)
 
 func spawnMob(quantity):
 	var newHead = head.instance()

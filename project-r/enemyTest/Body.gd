@@ -101,3 +101,9 @@ func character_velocity_computed(calculated_velocity : Vector2) -> void:
 
 func onHit():
 	emit_signal("onHit")
+
+
+func _on_HitArea_body_entered(body):
+	if body.is_in_group("catProjectile"):
+		onHit()
+		body.queue_free()
