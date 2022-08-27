@@ -28,6 +28,8 @@ var follow
 # Position of the head
 var previousPosition : Vector2
 
+signal onHit
+
 func _ready() -> void:
 	# init velocity
 	# Vector2.ZERO is enumeration for Vector2(0,0)
@@ -96,3 +98,6 @@ func character_velocity_computed(calculated_velocity : Vector2) -> void:
 	else:
 		# if reached target, stand at the closest point in the navigation map
 		global_position = Navigation2DServer.map_get_closest_point(nav_agent.get_navigation_map(), global_position)
+
+func onHit():
+	emit_signal("onHit")

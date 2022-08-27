@@ -4,6 +4,11 @@
 [ext_resource path="res://scripts/Cave.gd" type="Script" id=2]
 [ext_resource path="res://enemyTest/WormBasic.tscn" type="PackedScene" id=3]
 
+[sub_resource type="NavigationPolygon" id=13]
+vertices = PoolVector2Array( 146, 127, 269, 158, 49, 158, 128, 127, 48, 32, 129, 110, 269, 34, 145, 111 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ), PoolIntArray( 5, 4, 6, 7 ), PoolIntArray( 7, 6, 1, 0 ) ]
+outlines = [ PoolVector2Array( 48, 32, 49, 158, 269, 158, 269, 34 ), PoolVector2Array( 129, 110, 145, 111, 146, 127, 128, 127 ) ]
+
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -141,13 +146,11 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="NavigationPolygon" id=13]
-vertices = PoolVector2Array( 146, 127, 269, 158, 49, 158, 128, 127, 48, 32, 129, 110, 269, 34, 145, 111 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ), PoolIntArray( 5, 4, 6, 7 ), PoolIntArray( 7, 6, 1, 0 ) ]
-outlines = [ PoolVector2Array( 48, 32, 49, 158, 269, 158, 269, 34 ), PoolVector2Array( 129, 110, 145, 111, 146, 127, 128, 127 ) ]
-
 [node name="Cave" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+navpoly = SubResource( 13 )
 
 [node name="CaveFloor" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
@@ -173,10 +176,7 @@ vframes = 10
 frame = 31
 
 [node name="WormBasic" parent="." instance=ExtResource( 3 )]
-position = Vector2( 201, 40 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
-navpoly = SubResource( 13 )
+position = Vector2( 212, 94 )
 
 [connection signal="mouse_entered" from="Hole" to="." method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="Hole" to="." method="_on_Area2D_mouse_exited"]
