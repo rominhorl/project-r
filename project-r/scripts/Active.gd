@@ -19,4 +19,3 @@ func walking():
 		direction += Vector2(0,1)
 	move_and_slide(direction.normalized() * speed)
 	
-	
