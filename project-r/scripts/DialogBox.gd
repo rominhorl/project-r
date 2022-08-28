@@ -28,7 +28,7 @@ func loadDialog(dialogPicker):
 		rect_global_position = Vector2(100,230)
 		$Name.text = dialogDatabase.dialogDatabase.get(str(dialogPicker)).get(str(dialogProgress)).get("name")
 		$Text.bbcode_text = dialogDatabase.dialogDatabase.get(str(dialogPicker)).get(str(dialogProgress)).get("text")
-		$Sprite.texture = load(str("res://assets/",$Name.text,"_idle.png"))
+		$Sprite.texture = load(str("res://assets/npc/",$Name.text,"_idle.png"))
 		$Text.percent_visible = 0
 		$Tween.interpolate_property(
 			$Text, "percent_visible", 0, 1, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
