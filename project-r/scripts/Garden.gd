@@ -6,8 +6,7 @@ var isPlayerOnWell = false
 var isPlayerOnDoor = false
 var spawn
 
-var houseScene = "res://scenes/maps/House.tscn"
-var caveScene = "res://scenes/maps/caves/01.tscn"
+var houseScene = "res://scenes/maps/House2.tscn"
 
 # Signals
 

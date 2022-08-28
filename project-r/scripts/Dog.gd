@@ -43,6 +43,7 @@ func _on_Hit_body_entered(body):
 
 func _on_DogSprites_animation_finished():
 	if ($DogSprites.animation.left(4) == "Mine"):
+		$AudioStreamPlayer2D.play()
 		$DogPickAxe/CollisionShape2D.set_deferred("disabled",false)
 		print($DogPickAxe/CollisionShape2D.disabled)
 

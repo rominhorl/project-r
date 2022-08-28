@@ -47,6 +47,6 @@ func playerDeath():
 		$Active.add_child(secondary)
 	else:
 		print('end game')
-		get_tree().change_scene("res://scenes/DeathScreen.tscn")
+		get_tree().change_scene("res://scenes/Menu.tscn")
 
 	

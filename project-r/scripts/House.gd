@@ -5,6 +5,7 @@ extends Node2D
 var isPlayerOnDoor = false
 var gardenScene = "res://scenes/maps/Garden.tscn"
 var spawn
+var newDialogue = Dialogic.start('start')
 
 # Signal
 
@@ -14,9 +15,11 @@ signal changeScene(Scene)
 
 func _ready():
 	connect("changeScene",get_parent(),'changeScene')
-	$Grandpa.connect("callDialogGrandpa", $DialogManagerV2, "callDialog")
-	$Marina.connect("callDialogMarina", $DialogManagerV2, "callDialog")
-	$DialogManagerV2.callDialog("0")
+#	$Grandpa.connect("callDialogGrandpa", $DialogManagerV2, "callDialog")
+#	$Marina.connect("callDialogMarina", $DialogManagerV2, "callDialog")
+#	$DialogManagerV2.callDialog("0")
+	var newDialogue = Dialogic.start('start')
+	add_child(newDialogue)
 	spawn = $Spawn.position
 
 	

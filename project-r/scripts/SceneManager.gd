@@ -41,5 +41,5 @@ func changeCave():
 		var nextLevel = "res://scenes/maps/caves/" + levelList[caveLevel] + ".tscn"
 		changeScene(nextLevel)
 	if levelList[caveLevel] == 'EndScene':
-		changeScene("res://scenes/maps/Garden.tscn")
+		get_tree().change_scene("res://scenes/Ending.tscn")
 	caveLevel += 1

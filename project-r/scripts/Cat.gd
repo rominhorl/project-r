@@ -51,5 +51,6 @@ func _on_CatPickAxe_area_entered(area):
 
 func _on_CatSprites_animation_finished():
 	if ($CatSprites.animation.left(4) == "Mine"):
+		$AudioStreamPlayer2D.play()
 		$CatPickAxe/CollisionShape2D.set_deferred("disabled",false)
 		print($CatPickAxe/CollisionShape2D.disabled)
