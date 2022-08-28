@@ -106,3 +106,5 @@ func _on_HitArea_body_entered(body):
 	if body.is_in_group("catProjectile"):
 		onHit()
 		body.queue_free()
+	if body.is_in_group('Player'):
+		body.playerDeath()

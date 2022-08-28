@@ -5,7 +5,7 @@ const body = preload ("res://enemyTest/Body.tscn")
 var bodyCount = 0
 
 func _ready():
-	spawnMob(8)
+	spawnMob(5)
 
 func spawnMob(quantity):
 	var newHead = head.instance()
@@ -26,7 +26,6 @@ func spawnMob(quantity):
 		else:
 			newBody.get_node("Sprite").region_rect = Rect2(Vector2(0,0),Vector2(16,16))
 			newBody.follow = get_node(str("Body",bodyCount-1))
-		print(newBody.name)
 		bodyCount += 1
 		add_child(newBody)
 

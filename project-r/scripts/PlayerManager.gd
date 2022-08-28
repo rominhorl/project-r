@@ -9,7 +9,8 @@ func _ready():
 	
 func _process(delta):
 	changeCharacter()
-
+	
+	
 func pickCharacters():
 	randomize()
 	var characterSelection = randi() % 2
@@ -28,12 +29,24 @@ func pickCharacters():
 	$Secondary.add_child(secondary)
 
 func changeCharacter():
-	if Input.is_action_just_pressed("switch_characters"):
-		primary = $Active.get_child(1)
+	if Input.is_action_just_pressed("switch_characters") and (get_child_count() == 2):
+		primary = $Active.get_child(2)
 		secondary = $Secondary.get_child(1)
 		$Active.remove_child(primary)
 		$Secondary.add_child(primary)
 		$Secondary.remove_child(secondary)
 		$Active.add_child(secondary)
 
+func playerDeath():
+	print('morreu marmanjo')
+	if get_child_count() == 2:
+		primary = $Active.get_child(2)
+		secondary = $Secondary.get_child(1)
+		secondary.queue_free()
+		$Secondary.queue_free()
+		$Active.add_child(secondary)
+	else:
+		print('end game')
+		get_tree().change_scene("res://scenes/DeathScreen.tscn")
 
+	

@@ -12,6 +12,7 @@ func _ready():
 	navigation_path = $Pathfinding
 
 func _physics_process(delta):
+	
 	deltaT = delta
 	if primary and navigation_path:
 		generate_path()
@@ -29,3 +30,5 @@ func navigate():
 func move():
 	if (primary.global_position-global_position).abs().length_squared() > Vector2(16,16).length_squared():
 		move_and_collide(direction * deltaT)
+	else:
+		direction = Vector2.ZERO

@@ -1,8 +1,10 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/tiles/tilecaves.png" type="Texture" id=1]
 [ext_resource path="res://scenes/rocks/Rock.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/rocks/HardRock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://enemyTest/WormBasic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/CaveLevel.gd" type="Script" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -154,7 +156,13 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
+[sub_resource type="NavigationPolygon" id=16]
+vertices = PoolVector2Array( 16, 96, 16, 32, 144, 32, 144, 48, 144, 96, 192, 48, 192, 64, 240, 64, 240, 80, 192, 112, 144, 112, 384, 112, 336, 80, 336, 64, 384, 64, 432, 96, 432, 112, 384, 48, 432, 48, 560, 96, 432, 32, 560, 32, 384, 128, 192, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5, 6 ), PoolIntArray( 4, 6, 7, 8, 9, 10 ), PoolIntArray( 11, 12, 13, 14, 15, 16 ), PoolIntArray( 15, 14, 17, 18, 19 ), PoolIntArray( 18, 20, 21, 19 ), PoolIntArray( 8, 12, 11, 22, 23, 9 ) ]
+outlines = [ PoolVector2Array( 16, 32, 144, 32, 144, 48, 192, 48, 192, 64, 240, 64, 240, 80, 336, 80, 336, 64, 384, 64, 384, 48, 432, 48, 432, 32, 560, 32, 560, 96, 432, 96, 432, 112, 384, 112, 384, 128, 192, 128, 192, 112, 144, 112, 144, 96, 16, 96 ) ]
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 15 )
@@ -319,3 +327,15 @@ position = Vector2( 64, 80 )
 
 [node name="Rock52" parent="Rocks" instance=ExtResource( 3 )]
 position = Vector2( 208, 64 )
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2( 352, 80 )
+
+[node name="WormBasic" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64, 64 )
+
+[node name="WormBasic2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 496, 48 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+navpoly = SubResource( 16 )

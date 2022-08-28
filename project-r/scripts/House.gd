@@ -17,6 +17,7 @@ func _ready():
 	$Grandpa.connect("callDialogGrandpa", $DialogManagerV2, "callDialog")
 	$Marina.connect("callDialogMarina", $DialogManagerV2, "callDialog")
 	#$DialogManagerV2.callDialog("0")
+	spawn = $Spawn.position
 
 	
 func _process(delta):

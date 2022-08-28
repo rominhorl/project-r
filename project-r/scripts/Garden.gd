@@ -4,9 +4,10 @@ extends Node2D
 
 var isPlayerOnWell = false
 var isPlayerOnDoor = false
+var spawn
 
 var houseScene = "res://scenes/maps/House.tscn"
-var caveScene = "res://scenes/maps/Cave.tscn"
+var caveScene = "res://scenes/maps/caves/01.tscn"
 
 # Signals
 
@@ -16,6 +17,7 @@ signal changeScene(Scene)
 
 func _ready():
 	connect("changeScene",get_parent(),'changeScene')
+	spawn = $Spawn.position
 	
 func _process(delta):
 	goDownWell()
@@ -25,7 +27,8 @@ func _process(delta):
 
 func goDownWell():
 	if isPlayerOnWell and Input.is_action_just_pressed("interact"):
-		emit_signal("changeScene",caveScene)
+#		emit_signal("changeScene",caveScene)
+		get_parent().changeCave()
 
 func goToHouse():
 	if isPlayerOnDoor and Input.is_action_just_pressed("interact"):

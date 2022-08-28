@@ -101,6 +101,8 @@ region_rect = Rect2( 96, 0, 16, 32 )
 
 [node name="OutsideDoor" type="Area2D" parent="."]
 position = Vector2( 160, 64 )
+collision_layer = 16
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OutsideDoor"]
 position = Vector2( 16, 8 )
